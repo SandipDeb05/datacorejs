@@ -1,0 +1,16 @@
+{
+  "name": "datacorejs",
+  "version": "1.0.0",
+  "description": "collection of essential data structures implemented in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "datastructure",
+    "node"
+  ],
+  "author": "Sandip Deb",
+  "license": "MIT"
+}
