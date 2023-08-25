@@ -1,3 +1,7 @@
-import LinkedList from "./src/LinkedList.js";
+import { LinkedList, LinkedListNode } from "./src/LinkedList.js";
 
-export { LinkedList };
+const ll = new LinkedListNode();
+
+console.log(ll);
+
+export { LinkedList, LinkedListNode };

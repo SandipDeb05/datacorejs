@@ -129,4 +129,4 @@ class LinkedList {
   }
 }
 
-export default LinkedList;
+export { LinkedList, LinkedListNode };
