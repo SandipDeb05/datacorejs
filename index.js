@@ -1,7 +1,15 @@
-import { LinkedList, LinkedListNode } from "./src/LinkedList.js";
+import LinkedList from "./src/LinkedList/LinkedList.js";
+import DoublyLinkedList from "./src/DoublyLinkedList/DoublyLinkedList.js";
 
-const ll = new LinkedListNode();
+const ll = new DoublyLinkedList();
 
-console.log(ll);
+ll.push(10);
+ll.push(20);
+ll.push(30);
 
-export { LinkedList, LinkedListNode };
+// console.log(ll.unshift(10));
+// console.log(ll.unshift(20));
+
+console.log(ll.toArray());
+
+export { LinkedList };

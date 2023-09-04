@@ -1,4 +1,4 @@
-class LinkedListNode {
+class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
@@ -13,7 +13,7 @@ class LinkedList {
   }
   push(value) {
     if (!value) return null;
-    const newNode = new LinkedListNode(value);
+    const newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
@@ -22,7 +22,7 @@ class LinkedList {
       this.tail = newNode;
     }
     this.length++;
-    return this;
+    return newNode;
   }
   pop() {
     if (!this.head) return null;
@@ -32,27 +32,31 @@ class LinkedList {
       newTail = currentNode;
       currentNode = currentNode.next;
     }
-    this.tail = newTail;
-    this.tail.next = null;
-    this.length--;
     if (this.length === 1) {
       this.head = null;
       this.tail = null;
+    } else {
+      this.tail = newTail;
+      this.tail.next = null;
     }
-    return currentNode;
+    this.length--;
+    return currentNode.value;
   }
   shift() {
     if (!this.head) return null;
     const currentHead = this.head;
     this.head = currentHead.next;
     this.length--;
-    if (this.length === 1) {
+    if (this.length === 0) {
       this.tail = null;
     }
-    return currentHead;
+    return currentHead.value;
   }
   unshift(value) {
-    const newHead = new LinkedListNode(value);
+    if (!value) {
+      throw new Error("unshift must accept a value"); // FIXME try desc error message
+    }
+    const newHead = new Node(value);
     if (!this.head) {
       this.head = newHead;
       this.tail = newHead;
@@ -61,7 +65,7 @@ class LinkedList {
       this.head = newHead;
     }
     this.length++;
-    return this;
+    return newHead;
   }
   get(index) {
     if (index < 0 || index >= this.length) return null;
@@ -81,7 +85,7 @@ class LinkedList {
     }
     return false;
   }
-  insert(index, value) {
+  insertAt(index, value) {
     if (index < 0 || index > this.length) return false;
     if (index === this.length) {
       this.push(value);
@@ -90,7 +94,7 @@ class LinkedList {
       this.unshift(value);
       return true;
     } else {
-      let newNode = new LinkedListNode(value);
+      let newNode = new Node(value);
       let prevNode = this.get(index - 1);
       let temp = prevNode.next;
       prevNode.next = newNode;
@@ -99,8 +103,8 @@ class LinkedList {
       return true;
     }
   }
-  remove(index) {
-    if (index < 0 || index > this.length) return null;
+  removeAt(index) {
+    if (index < 0 || index >= this.length) return null;
     if (index === 0) {
       return this.shift();
     } else if (index === this.length - 1) {
@@ -127,6 +131,29 @@ class LinkedList {
     }
     return this;
   }
+  getHead() {
+    return this.head;
+  }
+  size() {
+    return this.length;
+  }
+  isEmpty() {
+    return this.head === null;
+  }
+  clear() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  toArray() {
+    const result = [];
+    let currentNode = this.head;
+    while (currentNode) {
+      result.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    return result;
+  }
 }
 
-export { LinkedList, LinkedListNode };
+export default LinkedList;
