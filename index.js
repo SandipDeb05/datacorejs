@@ -1,10 +1,14 @@
+import Queue from "./src/Queue/Queue.js";
 import Stack from "./src/Stack/Stack.js";
+const queue = new Queue();
+console.log(queue.enqueue(10));
+console.log(queue.enqueue(20));
+console.log(queue.enqueue(30));
+console.log(queue.enqueue(40));
 
-const stack = new Stack();
-
-console.log(stack.push(10));
-console.log(stack.push(20));
-console.log(stack.push(30));
-console.log(stack.push());
-
-console.log(stack.size());
+// console.log(queue.dequeue());
+// console.log(queue.dequeue());
+// console.log(queue.dequeue());
+// console.log(queue.dequeue());
+console.log(queue.toArray());
+console.log(queue);
