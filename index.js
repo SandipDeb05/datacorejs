@@ -1,14 +1,15 @@
-import Queue from "./src/Queue/Queue.js";
-import Stack from "./src/Stack/Stack.js";
-const queue = new Queue();
-console.log(queue.enqueue(10));
-console.log(queue.enqueue(20));
-console.log(queue.enqueue(30));
-console.log(queue.enqueue(40));
+import LinkedList from "./src/LinkedList/LinkedList.js";
 
-// console.log(queue.dequeue());
-// console.log(queue.dequeue());
-// console.log(queue.dequeue());
-// console.log(queue.dequeue());
-console.log(queue.toArray());
-console.log(queue);
+const ll = new LinkedList();
+
+// console.log(ll.push(10));
+// console.log(ll.push(10));
+// console.log(ll.push(20));
+// console.log(ll.unshift(20));
+// console.log(ll.unshift(30));
+// console.log(ll.unshift(40));
+
+// console.log(ll.insertAt(0, false));
+console.log(ll.reverse());
+
+console.log(ll);

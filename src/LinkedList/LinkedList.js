@@ -12,7 +12,9 @@ class LinkedList {
     this.length = 0;
   }
   push(value) {
-    if (!value) return null;
+    if (value === undefined) {
+      throw new Error("value cannot be undefined");
+    }
     const newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
@@ -53,8 +55,8 @@ class LinkedList {
     return currentHead.value;
   }
   unshift(value) {
-    if (!value) {
-      throw new Error("unshift must accept a value"); // FIXME try desc error message
+    if (value === undefined) {
+      throw new Error("value cannot be undefined.");
     }
     const newHead = new Node(value);
     if (!this.head) {
@@ -68,7 +70,16 @@ class LinkedList {
     return newHead;
   }
   get(index) {
-    if (index < 0 || index >= this.length) return null;
+    if (
+      index < 0 ||
+      index >= this.length ||
+      index === undefined ||
+      index === null
+    ) {
+      throw new Error(
+        "Index is out of bounds. It must be within the valid range."
+      );
+    }
     let counter = 0;
     let currentNode = this.head;
     while (counter !== index) {
@@ -78,6 +89,9 @@ class LinkedList {
     return currentNode;
   }
   set(index, value) {
+    if (value === undefined) {
+      throw new Error("value cannot be undefined");
+    }
     let foundNode = this.get(index);
     if (foundNode) {
       foundNode.value = value;
@@ -86,7 +100,19 @@ class LinkedList {
     return false;
   }
   insertAt(index, value) {
-    if (index < 0 || index > this.length) return false;
+    if (value === undefined) {
+      throw new Error("value cannot be undefined.");
+    }
+    if (
+      index < 0 ||
+      index > this.length ||
+      index === undefined ||
+      index === null
+    ) {
+      throw new Error(
+        "Index is out of bounds. It must be within the valid range."
+      );
+    }
     if (index === this.length) {
       this.push(value);
       return true;
@@ -104,7 +130,16 @@ class LinkedList {
     }
   }
   removeAt(index) {
-    if (index < 0 || index >= this.length) return null;
+    if (
+      index < 0 ||
+      index >= this.length ||
+      index === undefined ||
+      index === null
+    ) {
+      throw new Error(
+        "Index is out of bounds. It must be within the valid range."
+      );
+    }
     if (index === 0) {
       return this.shift();
     } else if (index === this.length - 1) {
@@ -118,6 +153,7 @@ class LinkedList {
     }
   }
   reverse() {
+    if (!this.head || !this.tail || this.head === this.tail) return this;
     let currentNode = this.head;
     this.head = this.tail;
     this.tail = currentNode;

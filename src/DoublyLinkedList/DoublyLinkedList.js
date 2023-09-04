@@ -13,7 +13,9 @@ class DoublyLinkedList {
     this.length = 0;
   }
   push(value) {
-    if (!value) return null;
+    if (value === undefined) {
+      throw new Error("value cannot be undefined");
+    }
     const newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
@@ -55,7 +57,9 @@ class DoublyLinkedList {
     return currentHead;
   }
   unshift(value) {
-    if (!value) return null;
+    if (value === undefined) {
+      throw new Error("value cannot be undefined");
+    }
     const newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
@@ -69,7 +73,16 @@ class DoublyLinkedList {
     return newNode;
   }
   get(index) {
-    if (index < 0 || index >= this.length) return null;
+    if (
+      index < 0 ||
+      index >= this.length ||
+      index === undefined ||
+      index === null
+    ) {
+      throw new Error(
+        "Index is out of bounds. It must be within the valid range."
+      );
+    }
     const mid = Math.floor(this.length / 2);
     let node;
     if (index <= mid) {
@@ -90,6 +103,9 @@ class DoublyLinkedList {
     return node;
   }
   set(index, value) {
+    if (value === undefined) {
+      throw new Error("value cannot be undefined");
+    }
     const foundNode = this.get(index);
     if (foundNode) {
       foundNode.value = value;
@@ -98,7 +114,19 @@ class DoublyLinkedList {
     return false;
   }
   insertAt(index, value) {
-    if (index < 0 || index > this.length) return false;
+    if (value === undefined) {
+      throw new Error("value cannot be undefined.");
+    }
+    if (
+      index < 0 ||
+      index > this.length ||
+      index === undefined ||
+      index === null
+    ) {
+      throw new Error(
+        "Index is out of bounds. It must be within the valid range."
+      );
+    }
     if (index === 0) return !!this.unshift(value);
     if (index === this.length) return !!this.push(value);
 
@@ -115,7 +143,16 @@ class DoublyLinkedList {
     return true;
   }
   removeAt(index) {
-    if (index < 0 || index >= this.length) return false;
+    if (
+      index < 0 ||
+      index >= this.length ||
+      index === undefined ||
+      index === null
+    ) {
+      throw new Error(
+        "Index is out of bounds. It must be within the valid range."
+      );
+    }
     if (index === 0) return this.shift();
     if (index === this.length - 1) return this.pop();
 

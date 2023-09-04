@@ -40,7 +40,7 @@ class Queue {
   }
   peek() {
     if (this.isEmpty()) return null;
-    return this.last.value;
+    return this.first.value;
   }
   isEmpty() {
     return this._size === 0;
