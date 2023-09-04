@@ -30,6 +30,10 @@ const stack = new Stack();
 const queue = new Queue();
 ```
 
+## License
+
+[MIT License](LICENSE)
+
 ## Author
 
 - [Sandip Deb](https://github.com/SandipDeb05)
