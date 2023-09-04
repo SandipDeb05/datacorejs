@@ -103,10 +103,10 @@ class DoublyLinkedList {
     return node;
   }
   set(index, value) {
+    const foundNode = this.get(index);
     if (value === undefined) {
       throw new Error("value cannot be undefined");
     }
-    const foundNode = this.get(index);
     if (foundNode) {
       foundNode.value = value;
       return true;
@@ -114,9 +114,6 @@ class DoublyLinkedList {
     return false;
   }
   insertAt(index, value) {
-    if (value === undefined) {
-      throw new Error("value cannot be undefined.");
-    }
     if (
       index < 0 ||
       index > this.length ||
@@ -126,6 +123,9 @@ class DoublyLinkedList {
       throw new Error(
         "Index is out of bounds. It must be within the valid range."
       );
+    }
+    if (value === undefined) {
+      throw new Error("value cannot be undefined.");
     }
     if (index === 0) return !!this.unshift(value);
     if (index === this.length) return !!this.push(value);

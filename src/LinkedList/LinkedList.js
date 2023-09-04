@@ -89,10 +89,10 @@ class LinkedList {
     return currentNode;
   }
   set(index, value) {
+    let foundNode = this.get(index);
     if (value === undefined) {
       throw new Error("value cannot be undefined");
     }
-    let foundNode = this.get(index);
     if (foundNode) {
       foundNode.value = value;
       return true;
@@ -100,9 +100,6 @@ class LinkedList {
     return false;
   }
   insertAt(index, value) {
-    if (value === undefined) {
-      throw new Error("value cannot be undefined.");
-    }
     if (
       index < 0 ||
       index > this.length ||
@@ -112,6 +109,9 @@ class LinkedList {
       throw new Error(
         "Index is out of bounds. It must be within the valid range."
       );
+    }
+    if (value === undefined) {
+      throw new Error("value cannot be undefined.");
     }
     if (index === this.length) {
       this.push(value);
