@@ -1,7 +1,7 @@
 {
   "name": "datacorejs",
-  "version": "1.0.1",
-  "description": "collection of essential data structures implemented in javascript",
+  "version": "1.0.2",
+  "description": "Collection of essential data structures implemented in javascript",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -9,8 +9,7 @@
   },
   "keywords": [
     "javascript",
-    "datastructure",
-    "node"
+    "datastructure"
   ],
   "author": "Sandip Deb",
   "license": "MIT"
