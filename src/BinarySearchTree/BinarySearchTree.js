@@ -117,19 +117,24 @@ class BinarySearchTree {
     if (!root.right) return root.value;
     return this.max(root.right);
   }
+
   delete(value) {
     if (value === undefined) {
       throw new Error("value can't be undefined");
     }
-    this.root = this.deleteNode(this.root, value);
-    return this.root.value;
+    if (this.contains(value)) {
+      this.root = this._deleteNode(this.root, value);
+      return value;
+    }
+    return null;
   }
-  deleteNode(root, value) {
+
+  _deleteNode(root, value) {
     if (root === null) return root;
     if (value < root.value) {
-      root.left = this.deleteNode(root.left, value);
+      root.left = this._deleteNode(root.left, value);
     } else if (value > root.value) {
-      root.right = this.deleteNode(root.right, value);
+      root.right = this._deleteNode(root.right, value);
     } else {
       if (!root.left && !root.right) return null;
       if (!root.left) {
@@ -138,19 +143,8 @@ class BinarySearchTree {
         return root.left;
       }
       root.value = this.min(root.right);
-      root.right = this.deleteNode(root.right, root.value);
+      root.right = this._deleteNode(root.right, root.value);
     }
     return root;
   }
 }
-
-const bst = new BinarySearchTree();
-
-bst.insert(20);
-bst.insert(10);
-bst.insert(30);
-bst.insert(5);
-
-// console.log(bst.max());
-console.log(bst.delete(100));
-console.log(bst);
