@@ -147,4 +147,30 @@ class BinarySearchTree {
     }
     return root;
   }
+
+  height(root) {
+    if (!root) return 0;
+    const leftHeight = this.height(root.left);
+    const rightHeight = this.height(root.right);
+    return Math.max(leftHeight, rightHeight) + 1;
+  }
+
+  printLevel(root, level) {
+    if (!root) return null;
+    if (level === 1) {
+      console.log(`${root.element} `);
+    } else if (level > 1) {
+      this.printLevel(root.left, level - 1);
+      this.printLevel(root.right, level - 1);
+    }
+  }
+
+  isBST(root, min, max) {
+    if (!root) return true;
+    if (root.value < min || root.value > max) return false;
+    return (
+      this.isBST(root.left, min, root.value) &&
+      this.isBST(root.right, root.value, max)
+    );
+  }
 }
