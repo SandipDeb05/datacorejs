@@ -9,8 +9,22 @@
   },
   "keywords": [
     "javascript",
-    "datastructure"
+    "datastructure",
+    "LinkedList",
+    "DoublyLinkedList",
+    "Stack",
+    "Queue",
+    "BinarySearchTree",
+    "Graph"
   ],
-  "author": "Sandip Deb",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SandipDeb05/datacorejs"
+  },
+  "bugs": {
+    "url": "https://github.com/SandipDeb05/datacorejs/issues"
+  },
+  "homepage": "https://github.com/SandipDeb05/datacorejs#readme",
+  "license": "MIT",
+  "author": "Sandip Deb"
 }

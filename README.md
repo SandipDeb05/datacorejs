@@ -10,7 +10,7 @@ datacorejs is a JavaScript library that provides a collection of commonly used d
 ## install
 
 ```sh
-npm install --save @datacorejs
+npm install --save datacorejs
 ```
 
 ## import

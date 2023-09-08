@@ -179,3 +179,5 @@ class Graph {
     return result;
   }
 }
+
+export default Graph;
