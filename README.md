@@ -158,6 +158,47 @@ myDoublyList.clear();
 console.log("Is the list empty after clearing?", myDoublyList.isEmpty()); // Should print: true
 ```
 
+### Stack
+
+```js
+// Create a new instance of the Stack
+const myStack = new Stack();
+
+// Check if the stack is empty
+console.log("Is the stack empty?", myStack.isEmpty()); // Should print: true
+
+// Push elements onto the stack
+myStack.push(10); // Push 10 onto the stack
+myStack.push(20); // Push 20 onto the stack
+myStack.push(30); // Push 30 onto the stack
+
+// Check the size of the stack
+console.log("Size of the stack:", myStack.size()); // Should print: 3
+
+// Peek at the top of the stack (without removing)
+console.log("Top of the stack:", myStack.peek()); // Should print: 30
+
+// Convert the stack to an array and print it
+console.log("Stack as an array:", myStack.toArray()); // Should print: [30, 20, 10]
+
+// Pop elements from the stack
+const poppedValue1 = myStack.pop(); // Pop 30
+const poppedValue2 = myStack.pop(); // Pop 20
+
+// Check the size of the stack after popping
+console.log("Size of the stack after popping:", myStack.size()); // Should print: 1
+
+// Check the popped values
+console.log("Popped value 1:", poppedValue1); // Should print: 30
+console.log("Popped value 2:", poppedValue2); // Should print: 20
+
+// Clear the stack
+myStack.clear();
+
+// Check if the stack is empty after clearing
+console.log("Is the stack empty after clearing?", myStack.isEmpty()); // Should print: true
+```
+
 ## License
 
 [MIT License](https://github.com/SandipDeb05/datacorejs/blob/main/LICENSE)
