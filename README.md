@@ -392,6 +392,6 @@ console.log("BFS starting from vertex B:", graph.bfs("B")); // Should print: ['B
 
 [MIT License](https://github.com/SandipDeb05/datacorejs/blob/main/LICENSE)
 
-## Author & Maintainer
+## Author
 
 [Sandip Deb](https://github.com/SandipDeb05)
