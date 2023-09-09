@@ -1,6 +1,6 @@
 {
   "name": "datacorejs",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Collection of essential data structures implemented in javascript",
   "main": "index.js",
   "type": "module",

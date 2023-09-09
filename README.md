@@ -23,7 +23,7 @@ import {
   Queue,
   BinarySearchTree,
   Graph,
-} from "@datacorejs";
+} from "datacorejs";
 ```
 
 ## API
@@ -37,6 +37,65 @@ const stack = new Stack();
 const queue = new Queue();
 const bst = new BinarySearchTree();
 const graph = new Graph();
+```
+
+### LinkedList
+
+```js
+const myList = new LinkedList();
+
+// Check if the list is empty
+console.log("Is the list empty?", myList.isEmpty()); // Should print: true
+
+// Add elements to the list
+myList.push(10); // Add 10 to the end
+myList.push(20); // Add 20 to the end
+myList.push(30); // Add 30 to the end
+
+// Check the size of the list
+console.log("Size of the list:", myList.size()); // Should print: 3
+
+// Convert the linked list to an array and print it
+console.log("Linked list as an array:", myList.toArray()); // Should print: [10, 20, 30]
+
+// Get the head of the linked list
+console.log("Head of the list:", myList.getHead()); // Should print: Node { value: 10, next: Node { value: 20, next: Node { value: 30, next: null } } }
+
+// Insert an element at a specific index
+myList.insertAt(1, 15); // Insert 15 at index 1
+
+// Check the modified linked list
+console.log("Linked list as an array:", myList.toArray()); // Should print: [10, 15, 20, 30]
+
+// Get the node at a specific index
+console.log("Node at index 2:", myList.get(2)); // Should print: Node { value: 20, next: Node { value: 30, next: null } }
+
+// Update the value of a node at a specific index
+myList.set(0, 5); // Update the value at index 0 to 5
+
+// Check the modified linked list
+console.log("Linked list as an array:", myList.toArray()); // Should print: [5, 15, 20, 30]
+
+// Remove a node at a specific index
+const removedNode = myList.removeAt(2); // Remove the node at index 2 (value 20)
+
+// Check the modified linked list
+console.log("Linked list as an array:", myList.toArray()); // Should print: [5, 15, 30]
+
+// Check the removed node
+console.log("Removed node:", removedNode); // Should print: Node { value: 20, next: null }
+
+// Reverse the linked list
+myList.reverse();
+
+// Check the reversed linked list
+console.log("Reversed linked list:", myList.toArray()); // Should print: [30, 15, 5]
+
+// Clear the linked list
+myList.clear();
+
+// Check if the list is empty after clearing
+console.log("Is the list empty after clearing?", myList.isEmpty()); // Should print: true
 ```
 
 ## License
