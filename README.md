@@ -7,7 +7,22 @@
 
 Datacorejs is a JavaScript library that provides a collection of commonly used data structures to simplify your development tasks. Whether you're working on algorithms, data manipulation, or need efficient storage solutions, this package has you covered. It's designed to be easy to use, well-documented, and highly performant.
 
-## install
+## Table of Contents
+
+- [Install](##install)
+- [import](#import)
+- [API](#api)
+  - [constructor](#constructor)
+  - [LinkedList](#LinkedList)
+  - [DoublyLinkedList](#DoublyLinkedList)
+  - [Stack](#Stack)
+  - [Queue](#Queue)
+  - [BinarySearchTree](#BinarySearchTree)
+  - [Graph](#Graph)
+- [License](#License)
+- [Author](#Author)
+
+## Install
 
 ```sh
 npm install --save datacorejs
