@@ -240,6 +240,68 @@ myQueue.clear();
 console.log("Is the queue empty after clearing?", myQueue.isEmpty()); // Should print: true
 ```
 
+### BinarySearchTree
+
+```js
+// Create a new instance of the BinarySearchTree
+const bst = new BinarySearchTree();
+
+// Check if the BST is empty
+console.log("Is the BST empty?", bst.isEmpty()); // Should print: true
+
+// Insert values into the BST
+bst.insert(50);
+bst.insert(30);
+bst.insert(70);
+bst.insert(20);
+bst.insert(40);
+bst.insert(60);
+bst.insert(80);
+
+// Check if the BST is empty after inserting
+console.log("Is the BST empty after inserting?", bst.isEmpty()); // Should print: false
+
+// Get the root node of the BST
+const root = bst.getRoot();
+console.log("Root node value:", root.value); // Should print: 50
+
+// Check if the BST contains specific values
+console.log("Does BST contain 30?", bst.contains(30)); // Should print: true
+console.log("Does BST contain 90?", bst.contains(90)); // Should print: false
+
+// Perform breadth-first search (BFS) traversal
+console.log("BFS traversal:", bst.bfs()); // Should print: [50, 30, 70, 20, 40, 60, 80]
+
+// Perform depth-first search (DFS) in pre-order traversal
+console.log("DFS (Pre-order) traversal:", bst.dfsPreOrder()); // Should print: [50, 30, 20, 40, 70, 60, 80]
+
+// Perform depth-first search (DFS) in post-order traversal
+console.log("DFS (Post-order) traversal:", bst.dfsPostOrder()); // Should print: [20, 40, 30, 60, 80, 70, 50]
+
+// Perform depth-first search (DFS) in in-order traversal
+console.log("DFS (In-order) traversal:", bst.dfsInOrder()); // Should print: [20, 30, 40, 50, 60, 70, 80]
+
+// Find the minimum value in the BST
+console.log("Minimum value in BST:", bst.min()); // Should print: 20
+
+// Find the maximum value in the BST
+console.log("Maximum value in BST:", bst.max()); // Should print: 80
+
+// Delete a value from the BST
+bst.delete(30);
+console.log("Deleted 30 from BST. In-order traversal:", bst.dfsInOrder()); // Should print: [20, 40, 50, 60, 70, 80]
+
+// Calculate the height of the BST
+console.log("Height of BST:", bst.height(root)); // Should print: 3
+
+// Print nodes at a specific level (level 2)
+console.log("Nodes at level 2:");
+bst.printLevel(root, 2);
+
+// Check if the BST is a valid Binary Search Tree (BST)
+console.log("Is the BST a valid BST?", bst.isBST(root, -Infinity, Infinity)); // Should print: true
+```
+
 ## License
 
 [MIT License](https://github.com/SandipDeb05/datacorejs/blob/main/LICENSE)
