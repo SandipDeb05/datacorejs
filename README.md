@@ -57,202 +57,202 @@ const graph = new Graph();
 ### LinkedList
 
 ```js
-const myList = new LinkedList();
+const linkedList = new LinkedList();
 
 // Check if the list is empty
-console.log("Is the list empty?", myList.isEmpty()); // Should print: true
+console.log("Is the list empty?", linkedList.isEmpty()); // Should print: true
 
 // Add elements to the list
-myList.push(10); // Add 10 to the end
-myList.push(20); // Add 20 to the end
-myList.push(30); // Add 30 to the end
+linkedList.push(10); // Add 10 to the end
+linkedList.push(20); // Add 20 to the end
+linkedList.push(30); // Add 30 to the end
 
 // Check the size of the list
-console.log("Size of the list:", myList.size()); // Should print: 3
+console.log("Size of the list:", linkedList.size()); // Should print: 3
 
 // Convert the linked list to an array and print it
-console.log("Linked list as an array:", myList.toArray()); // Should print: [10, 20, 30]
+console.log("Linked list as an array:", linkedList.toArray()); // Should print: [10, 20, 30]
 
 // Get the head of the linked list
-console.log("Head of the list:", myList.getHead()); // Should print: Node { value: 10, next: Node { value: 20, next: Node { value: 30, next: null } } }
+console.log("Head of the list:", linkedList.getHead()); // Should print: Node { value: 10, next: Node { value: 20, next: Node { value: 30, next: null } } }
 
 // Insert an element at a specific index
-myList.insertAt(1, 15); // Insert 15 at index 1
+linkedList.insertAt(1, 15); // Insert 15 at index 1
 
 // Check the modified linked list
-console.log("Linked list as an array:", myList.toArray()); // Should print: [10, 15, 20, 30]
+console.log("Linked list as an array:", linkedList.toArray()); // Should print: [10, 15, 20, 30]
 
 // Get the node at a specific index
-console.log("Node at index 2:", myList.get(2)); // Should print: Node { value: 20, next: Node { value: 30, next: null } }
+console.log("Node at index 2:", linkedList.get(2)); // Should print: Node { value: 20, next: Node { value: 30, next: null } }
 
 // Update the value of a node at a specific index
-myList.set(0, 5); // Update the value at index 0 to 5
+linkedList.set(0, 5); // Update the value at index 0 to 5
 
 // Check the modified linked list
-console.log("Linked list as an array:", myList.toArray()); // Should print: [5, 15, 20, 30]
+console.log("Linked list as an array:", linkedList.toArray()); // Should print: [5, 15, 20, 30]
 
 // Remove a node at a specific index
-const removedNode = myList.removeAt(2); // Remove the node at index 2 (value 20)
+const removedNode = linkedList.removeAt(2); // Remove the node at index 2 (value 20)
 
 // Check the modified linked list
-console.log("Linked list as an array:", myList.toArray()); // Should print: [5, 15, 30]
+console.log("Linked list as an array:", linkedList.toArray()); // Should print: [5, 15, 30]
 
 // Check the removed node
 console.log("Removed node:", removedNode); // Should print: Node { value: 20, next: null }
 
 // Reverse the linked list
-myList.reverse();
+linkedList.reverse();
 
 // Check the reversed linked list
-console.log("Reversed linked list:", myList.toArray()); // Should print: [30, 15, 5]
+console.log("Reversed linked list:", linkedList.toArray()); // Should print: [30, 15, 5]
 
 // Clear the linked list
-myList.clear();
+linkedList.clear();
 
 // Check if the list is empty after clearing
-console.log("Is the list empty after clearing?", myList.isEmpty()); // Should print: true
+console.log("Is the list empty after clearing?", linkedList.isEmpty()); // Should print: true
 ```
 
 ### DoublyLinkedList
 
 ```js
 // Create a new instance of the DoublyLinkedList
-const myDoublyList = new DoublyLinkedList();
+const doublyLinkedList = new DoublyLinkedList();
 
 // Check if the list is empty
-console.log("Is the list empty?", myDoublyList.isEmpty()); // Should print: true
+console.log("Is the list empty?", doublyLinkedList.isEmpty()); // Should print: true
 
 // Add elements to the list
-myDoublyList.push(10); // Add 10 to the end
-myDoublyList.push(20); // Add 20 to the end
-myDoublyList.push(30); // Add 30 to the end
+doublyLinkedList.push(10); // Add 10 to the end
+doublyLinkedList.push(20); // Add 20 to the end
+doublyLinkedList.push(30); // Add 30 to the end
 
 // Check the size of the list
-console.log("Size of the list:", myDoublyList.size()); // Should print: 3
+console.log("Size of the list:", doublyLinkedList.size()); // Should print: 3
 
 // Convert the doubly linked list to an array and print it
-console.log("Doubly linked list as an array:", myDoublyList.toArray()); // Should print: [10, 20, 30]
+console.log("Doubly linked list as an array:", doublyLinkedList.toArray()); // Should print: [10, 20, 30]
 
 // Get the head of the doubly linked list
-console.log("Head of the list:", myDoublyList.getHead()); // Should print: Node { value: 10, prev: null, next: Node { value: 20, prev: [Circular], next: [Object] } }
+console.log("Head of the list:", doublyLinkedList.getHead()); // Should print: Node { value: 10, prev: null, next: Node { value: 20, prev: [Circular], next: [Object] } }
 
 // Insert an element at a specific index
-myDoublyList.insertAt(1, 15); // Insert 15 at index 1
+doublyLinkedList.insertAt(1, 15); // Insert 15 at index 1
 
 // Check the modified doubly linked list
-console.log("Doubly linked list as an array:", myDoublyList.toArray()); // Should print: [10, 15, 20, 30]
+console.log("Doubly linked list as an array:", doublyLinkedList.toArray()); // Should print: [10, 15, 20, 30]
 
 // Get the node at a specific index
-console.log("Node at index 2:", myDoublyList.get(2)); // Should print: Node { value: 20, prev: Node { value: 15, prev: [Object], next: [Object] }, next: Node { value: 30, prev: [Object], next: null } }
+console.log("Node at index 2:", doublyLinkedList.get(2)); // Should print: Node { value: 20, prev: Node { value: 15, prev: [Object], next: [Object] }, next: Node { value: 30, prev: [Object], next: null } }
 
 // Update the value of a node at a specific index
-myDoublyList.set(0, 5); // Update the value at index 0 to 5
+doublyLinkedList.set(0, 5); // Update the value at index 0 to 5
 
 // Check the modified doubly linked list
-console.log("Doubly linked list as an array:", myDoublyList.toArray()); // Should print: [5, 15, 20, 30]
+console.log("Doubly linked list as an array:", doublyLinkedList.toArray()); // Should print: [5, 15, 20, 30]
 
 // Remove a node at a specific index
-const removedNode = myDoublyList.removeAt(2); // Remove the node at index 2 (value 20)
+const removedNode = doublyLinkedList.removeAt(2); // Remove the node at index 2 (value 20)
 
 // Check the modified doubly linked list
-console.log("Doubly linked list as an array:", myDoublyList.toArray()); // Should print: [5, 15, 30]
+console.log("Doubly linked list as an array:", doublyLinkedList.toArray()); // Should print: [5, 15, 30]
 
 // Check the removed node
 console.log("Removed node:", removedNode); // Should print: Node { value: 20, prev: null, next: null }
 
 // Reverse the doubly linked list
-myDoublyList.reverse();
+doublyLinkedList.reverse();
 
 // Check the reversed doubly linked list
-console.log("Reversed doubly linked list:", myDoublyList.toArray()); // Should print: [30, 15, 5]
+console.log("Reversed doubly linked list:", doublyLinkedList.toArray()); // Should print: [30, 15, 5]
 
 // Clear the doubly linked list
-myDoublyList.clear();
+doublyLinkedList.clear();
 
 // Check if the list is empty after clearing
-console.log("Is the list empty after clearing?", myDoublyList.isEmpty()); // Should print: true
+console.log("Is the list empty after clearing?", doublyLinkedList.isEmpty()); // Should print: true
 ```
 
 ### Stack
 
 ```js
 // Create a new instance of the Stack
-const myStack = new Stack();
+const stack = new Stack();
 
 // Check if the stack is empty
-console.log("Is the stack empty?", myStack.isEmpty()); // Should print: true
+console.log("Is the stack empty?", stack.isEmpty()); // Should print: true
 
 // Push elements onto the stack
-myStack.push(10); // Push 10 onto the stack
-myStack.push(20); // Push 20 onto the stack
-myStack.push(30); // Push 30 onto the stack
+stack.push(10); // Push 10 onto the stack
+stack.push(20); // Push 20 onto the stack
+stack.push(30); // Push 30 onto the stack
 
 // Check the size of the stack
-console.log("Size of the stack:", myStack.size()); // Should print: 3
+console.log("Size of the stack:", stack.size()); // Should print: 3
 
 // Peek at the top of the stack (without removing)
-console.log("Top of the stack:", myStack.peek()); // Should print: 30
+console.log("Top of the stack:", stack.peek()); // Should print: 30
 
 // Convert the stack to an array and print it
-console.log("Stack as an array:", myStack.toArray()); // Should print: [30, 20, 10]
+console.log("Stack as an array:", stack.toArray()); // Should print: [30, 20, 10]
 
 // Pop elements from the stack
-const poppedValue1 = myStack.pop(); // Pop 30
-const poppedValue2 = myStack.pop(); // Pop 20
+const poppedValue1 = stack.pop(); // Pop 30
+const poppedValue2 = stack.pop(); // Pop 20
 
 // Check the size of the stack after popping
-console.log("Size of the stack after popping:", myStack.size()); // Should print: 1
+console.log("Size of the stack after popping:", stack.size()); // Should print: 1
 
 // Check the popped values
 console.log("Popped value 1:", poppedValue1); // Should print: 30
 console.log("Popped value 2:", poppedValue2); // Should print: 20
 
 // Clear the stack
-myStack.clear();
+stack.clear();
 
 // Check if the stack is empty after clearing
-console.log("Is the stack empty after clearing?", myStack.isEmpty()); // Should print: true
+console.log("Is the stack empty after clearing?", stack.isEmpty()); // Should print: true
 ```
 
 ### Queue
 
 ```js
 // Create a new instance of the Queue
-const myQueue = new Queue();
+const queue = new Queue();
 
 // Check if the queue is empty
-console.log("Is the queue empty?", myQueue.isEmpty()); // Should print: true
+console.log("Is the queue empty?", queue.isEmpty()); // Should print: true
 
 // Enqueue elements into the queue
-myQueue.enqueue(10); // Enqueue 10
-myQueue.enqueue(20); // Enqueue 20
-myQueue.enqueue(30); // Enqueue 30
+queue.enqueue(10); // Enqueue 10
+queue.enqueue(20); // Enqueue 20
+queue.enqueue(30); // Enqueue 30
 
 // Check the size of the queue
-console.log("Size of the queue:", myQueue.size()); // Should print: 3
+console.log("Size of the queue:", queue.size()); // Should print: 3
 
 // Peek at the front of the queue (without removing)
-console.log("Front of the queue:", myQueue.peek()); // Should print: 10
+console.log("Front of the queue:", queue.peek()); // Should print: 10
 
 // Convert the queue to an array and print it
-console.log("Queue as an array:", myQueue.toArray()); // Should print: [10, 20, 30]
+console.log("Queue as an array:", queue.toArray()); // Should print: [10, 20, 30]
 
 // Dequeue elements from the queue
-const dequeuedValue1 = myQueue.dequeue(); // Dequeue 10
-const dequeuedValue2 = myQueue.dequeue(); // Dequeue 20
+const dequeuedValue1 = queue.dequeue(); // Dequeue 10
+const dequeuedValue2 = queue.dequeue(); // Dequeue 20
 
 // Check the size of the queue after dequeuing
-console.log("Size of the queue after dequeuing:", myQueue.size()); // Should print: 1
+console.log("Size of the queue after dequeuing:", queue.size()); // Should print: 1
 
 // Check the dequeued values
 console.log("Dequeued value 1:", dequeuedValue1); // Should print: 10
 console.log("Dequeued value 2:", dequeuedValue2); // Should print: 20
 
 // Clear the queue
-myQueue.clear();
+queue.clear();
 
 // Check if the queue is empty after clearing
-console.log("Is the queue empty after clearing?", myQueue.isEmpty()); // Should print: true
+console.log("Is the queue empty after clearing?", queue.isEmpty()); // Should print: true
 ```
 
 ### BinarySearchTree
