@@ -199,6 +199,47 @@ myStack.clear();
 console.log("Is the stack empty after clearing?", myStack.isEmpty()); // Should print: true
 ```
 
+### Queue
+
+```js
+// Create a new instance of the Queue
+const myQueue = new Queue();
+
+// Check if the queue is empty
+console.log("Is the queue empty?", myQueue.isEmpty()); // Should print: true
+
+// Enqueue elements into the queue
+myQueue.enqueue(10); // Enqueue 10
+myQueue.enqueue(20); // Enqueue 20
+myQueue.enqueue(30); // Enqueue 30
+
+// Check the size of the queue
+console.log("Size of the queue:", myQueue.size()); // Should print: 3
+
+// Peek at the front of the queue (without removing)
+console.log("Front of the queue:", myQueue.peek()); // Should print: 10
+
+// Convert the queue to an array and print it
+console.log("Queue as an array:", myQueue.toArray()); // Should print: [10, 20, 30]
+
+// Dequeue elements from the queue
+const dequeuedValue1 = myQueue.dequeue(); // Dequeue 10
+const dequeuedValue2 = myQueue.dequeue(); // Dequeue 20
+
+// Check the size of the queue after dequeuing
+console.log("Size of the queue after dequeuing:", myQueue.size()); // Should print: 1
+
+// Check the dequeued values
+console.log("Dequeued value 1:", dequeuedValue1); // Should print: 10
+console.log("Dequeued value 2:", dequeuedValue2); // Should print: 20
+
+// Clear the queue
+myQueue.clear();
+
+// Check if the queue is empty after clearing
+console.log("Is the queue empty after clearing?", myQueue.isEmpty()); // Should print: true
+```
+
 ## License
 
 [MIT License](https://github.com/SandipDeb05/datacorejs/blob/main/LICENSE)
