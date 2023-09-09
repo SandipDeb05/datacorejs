@@ -302,6 +302,77 @@ bst.printLevel(root, 2);
 console.log("Is the BST a valid BST?", bst.isBST(root, -Infinity, Infinity)); // Should print: true
 ```
 
+### Graph
+
+```js
+// Create a new instance of the Graph
+const graph = new Graph();
+
+// Add vertices to the graph
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addVertex("D");
+graph.addVertex("E");
+
+// Add edges to the graph
+graph.addEdge("A", "B");
+graph.addEdge("A", "C");
+graph.addEdge("B", "D");
+graph.addEdge("C", "E");
+
+// Print the graph's adjacency list
+console.log("Graph Adjacency List:");
+graph.printGraph();
+/*
+Should print:
+A -> B,C
+B -> A,D
+C -> A,E
+D -> B
+E -> C
+*/
+
+// Check if the graph has specific edges
+console.log("Does graph have edge A to B?", graph.hasEdge("A", "B")); // Should print: true
+console.log("Does graph have edge B to C?", graph.hasEdge("B", "C")); // Should print: false
+
+// Check if the graph has specific vertices
+console.log("Does graph have vertex A?", graph.hasVertex("A")); // Should print: true
+console.log("Does graph have vertex F?", graph.hasVertex("F")); // Should print: false
+
+// Remove edges from the graph
+graph.removeEdge("A", "B");
+console.log("Graph Adjacency List after removing edge A to B:");
+graph.printGraph();
+/*
+Should print:
+A -> C
+B -> D
+C -> A,E
+D -> B
+E -> C
+*/
+
+// Remove vertices from the graph
+graph.removeVertex("C");
+console.log("Graph Adjacency List after removing vertex C:");
+graph.printGraph();
+/*
+Should print:
+A -> 
+B -> D
+D -> B
+E -> 
+*/
+
+// Perform Depth-First Search (DFS) starting from vertex 'A'
+console.log("DFS starting from vertex A:", graph.dfs("A")); // Should print: ['A']
+
+// Perform Breadth-First Search (BFS) starting from vertex 'B'
+console.log("BFS starting from vertex B:", graph.bfs("B")); // Should print: ['B', 'D']
+```
+
 ## License
 
 [MIT License](https://github.com/SandipDeb05/datacorejs/blob/main/LICENSE)
