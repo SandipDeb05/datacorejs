@@ -9,7 +9,7 @@ Datacorejs is a JavaScript library that provides a collection of commonly used d
 
 ## Table of Contents
 
-- [Install](##install)
+- [Install](#Install)
 - [import](#import)
 - [API](#api)
   - [constructor](#constructor)
