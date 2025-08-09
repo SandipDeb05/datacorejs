@@ -30,6 +30,10 @@ npm install --save datacorejs
 
 ## import
 
+### Node.js (ESM)
+
+#### If your package.json has "type": "module", you can use ES module imports:
+
 ```js
 import {
   LinkedList,
@@ -39,6 +43,42 @@ import {
   BinarySearchTree,
   Graph,
 } from "datacorejs";
+```
+
+### Node.js (CommonJS)
+
+#### If your package.json _does not_ have "type": "module", use require syntax:
+
+```js
+const {
+  LinkedList,
+  DoublyLinkedList,
+  Stack,
+  Queue,
+  BinarySearchTree,
+  Graph,
+} = require("datacorejs");
+```
+
+### Browser
+
+#### For browser environments, import directly from the node_modules directory:
+
+```js
+import {
+  LinkedList,
+  DoublyLinkedList,
+  Stack,
+  Queue,
+  BinarySearchTree,
+  Graph,
+} from "./node_modules/datacorejs/dist/index.js";
+```
+
+#### Also add type="module" in your HTML file
+
+```html
+<script type="module" src="./index.js"></script>
 ```
 
 ## API

@@ -1,5 +1,21 @@
-.git*
-.gitignore
-coverage/
+# Ignore development files
+src/
 node_modules/
+npm-debug.log
+.DS_Store
+
+# Ignore build/config files
+rollup.config.js
+*.config.js
+*.lock
+
+# Ignore test files
 test/
+__tests__/
+coverage/
+
+# Ignore editor configs
+.vscode/
+.idea/
+.eslintrc*
+.prettierrc*
