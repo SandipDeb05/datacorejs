@@ -1,6 +1,6 @@
 # datacorejs
 
-[![npm](https://img.shields.io/npm/v/datacorejs.svg)](https://www.npmjs.com/package/your-package-name)
+[![npm](https://img.shields.io/npm/v/datacorejs.svg)](https://www.npmjs.com/package/datacorejs)
 [![License](https://img.shields.io/npm/l/datacorejs.svg)](LICENSE)
 
 ## Description
@@ -30,6 +30,8 @@ npm install --save datacorejs
 
 ## import
 
+### ES Module
+
 ```js
 import {
   LinkedList,
@@ -39,6 +41,19 @@ import {
   BinarySearchTree,
   Graph,
 } from "datacorejs";
+```
+
+### CommonJS
+
+```
+const {
+  LinkedList,
+  DoublyLinkedList,
+  Stack,
+  Queue,
+  BinarySearchTree,
+  Graph,
+} = require("datacorejs");
 ```
 
 ## API

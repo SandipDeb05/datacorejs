@@ -2,9 +2,17 @@
   "name": "datacorejs",
   "version": "2.0.0",
   "description": "Collection of essential data structures implemented in javascript",
-  "main": "index.js",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -26,5 +34,10 @@
   },
   "homepage": "https://github.com/SandipDeb05/datacorejs#readme",
   "license": "MIT",
-  "author": "Sandip Deb"
+  "author": "Sandip Deb",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^4.46.2"
+  }
 }
