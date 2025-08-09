@@ -1,5 +1,21 @@
-.git*
-.gitignore
-coverage/
+# Development and build configs
 node_modules/
-test/
+src/
+rollup.config.js
+*.config.js
+*.test.js
+*.spec.js
+
+# Tests and docs
+tests/
+__tests__/
+*.md          # Optional: exclude if you don't want README published (usually keep README)
+docs/
+
+# Build artifacts if you commit them but not needed
+.vscode/
+*.log
+
+# Ignore Git files
+.git/
+.gitignore
